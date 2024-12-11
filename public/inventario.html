@@ -1,0 +1,1465 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmesa.gitlab.io/doc-nueva-arquitectura/inventario.html">
+      
+      
+        <link rel="prev" href="bitacora.html">
+      
+      
+        <link rel="next" href="poc.html">
+      
+      
+      <link rel="icon" href="assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Inventarios - Nueva Arquitectura</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inventarios" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Nueva Arquitectura" class="md-header__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nueva Arquitectura
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inventarios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 6v12h8V6H8m6 4h-4V8h4v2m5.4-8.4C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="black"  aria-label="Oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.4 1.6C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18M8 6v12h8V6H8m7 11H9V7h6v10m-5-3h4v2h-4v-2Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Nueva Arquitectura" class="md-nav__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    Nueva Arquitectura
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Definiciones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Definiciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="definiciones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de dominio basada en Microservicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="serv-app.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servidor de Aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="venta-contenido.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Venta de contenidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dicc-datos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diccionario de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bitacora.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bitácora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Inventarios
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="inventario.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Inventarios
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-componentesmarcados-ya-se-encuentran-deprecados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otros componentes(marcados ya se  encuentran deprecados)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicios-migrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios migrados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximos-a-migrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Próximos a Migrár
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hay-reduccion-de-codigo-del-lado-de-basic-llamados-retiro-de-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Hay reducción de código del lado de BASIC, llamados, retiro de módulos?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-de-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrategia de Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-la-medida-del-analisis-dimensionar-que-otros-recursos-vamos-a-necesitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      En la medida del análisis dimensionar que otros recursos vamos a necesitar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-tecnologias-alternativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluacion de tecnologias alternativas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-tentativa-de-repositorios-a-dar-de-baja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista tentativa de repositorios a dar de baja
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pros-y-contras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros y Contras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pros y Contras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contras
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pruebas de concepto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glosario.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glosario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="links.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links de Interés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backlog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación Técnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación Técnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/documentacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de Servicios de Dominio DSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/mensaje.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La Clase BaseMessage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/componentes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/excepciones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manejo de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/estructura-carpetas.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura de Carpetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/trazabilidad.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trazabilidad Operativa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/arquitectura-limpia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura Limpia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/patron-pipeline.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patrón Pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otros-componentesmarcados-ya-se-encuentran-deprecados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otros componentes(marcados ya se  encuentran deprecados)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comentarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicios-migrados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servicios migrados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximos-a-migrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Próximos a Migrár
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hay-reduccion-de-codigo-del-lado-de-basic-llamados-retiro-de-modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Hay reducción de código del lado de BASIC, llamados, retiro de módulos?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategia-de-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrategia de Logs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-la-medida-del-analisis-dimensionar-que-otros-recursos-vamos-a-necesitar" class="md-nav__link">
+    <span class="md-ellipsis">
+      En la medida del análisis dimensionar que otros recursos vamos a necesitar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-de-tecnologias-alternativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluacion de tecnologias alternativas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lista-tentativa-de-repositorios-a-dar-de-baja" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista tentativa de repositorios a dar de baja
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pros-y-contras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros y Contras
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pros y Contras">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contras" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contras
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#riesgos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Riesgos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="inventarios">Inventarios</h1>
+<h2 id="componentes">Componentes</h2>
+<table>
+<thead>
+<tr>
+<th>NOMBRE</th>
+<th>SERVICIO</th>
+<th>ARCHIVO FW.DAT</th>
+<th>JAR</th>
+<th>DEPENDENCIAS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-convenios-termFw-Jconvenios">Convenios</a></td>
+<td>Módulo que permite controlar pagos, consultas y demás operaciones de la tecla de convenios.</td>
+<td><code>FWCONVE.DAT</code></td>
+<td><code>JConvenios.jar</code><br><code>vr 1.4</code></td>
+<td><code>VentasPagos</code><br><code>BbRulesValidator</code></td>
+</tr>
+<tr>
+<td><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-garantiaEntrega-termFw-CidomGarantiaExtendida">Garantía<br>Extendida</a></td>
+<td>Modulo para el control de los servicios de CIDOM (control de domicilios)y garantextendida en POS</td>
+<td><code>FWGECID.DAT</code></td>
+<td><code>CidomGarantiaExtendida.jar</code><br><code>vr 1.4</code></td>
+<td><code>VentasPagos</code><br><code>OS4690TerminalUtilities</code></td>
+</tr>
+<tr>
+<td><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-contenido-termFw-VentaContenidos">Venta<br>Contenidos</a></td>
+<td>Módulo que controla las operaciones del servicio de venta de contenidos.</td>
+<td><code>FWVDCONT.DAT</code></td>
+<td><code>VentaContenidos.jar</code><br><code>vr 1.4</code></td>
+<td><code>VentasPagos</code></td>
+</tr>
+<tr>
+<td><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-ventaAutomaticas-termFrameworkPromo-Faccedicen">Facturador</a></td>
+<td>Módulo de facturacturación POS para transacciones de Picking.</td>
+<td><code>FWMAIN.DAT</code></td>
+<td><code>FacCedicen.jar</code><br><code>vr 1.8</code></td>
+<td><code>ApiComunicaciones</code><br><code>Modelo</code><br><code>Reportes</code><br><code>slf4j-log4j12</code><br><code>os4690</code><br><code>FwUtil</code><br><code>AEFExtension</code><br><code>SoaEngine</code><br><code>DataStore</code><br><code>SIUser</code><br><code>libase</code></td>
+</tr>
+<tr>
+<td>Orquestador</td>
+<td>Productos asociados al PINPAD (revisar)</td>
+<td>-</td>
+<td><code>FwKeyOperations.jar</code><br><code>vr 1.8</code></td>
+<td><code>VentasPagos</code></td>
+</tr>
+<tr>
+<td><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-reglas-termFw-FrameworkContenidosPagos">Ventas<br>Pagos</a></td>
+<td>Posible orquestador ya que tiene mas lógica</td>
+<td>-</td>
+<td><code>FrameworkContenidosPagos.jar</code><br><code>vr 1.8</code></td>
+<td><code>ApiPersistencia</code><br><code>ApplicationLayer</code><br><code>Clifre</code><br><code>DomainLayer</code><br><code>FwConf</code><br><code>Modelo</code><br><code>os4690</code> <code>Presentacion</code><br><code>Reportes</code><br><code>smartmod</code><br></td>
+</tr>
+<tr>
+<td><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-comunicacion-term-ApiComunicaciones">Api<br>Comunicaciones</a></td>
+<td>Modulo encargado de realizar la comunicacion hacia el controlador.</td>
+<td>-</td>
+<td><code>ApiComunicaciones.jar</code><br><code>vr 1.8</code></td>
+<td><code>ApiPinpad</code><br><code>comm4690</code><br><code>FwUtil</code><br><code>jackson-core</code><br><code>jersey-container-servlet</code><br><code>jersey-media-json-jackson</code><br><code>Modelo</code><br><code>OS4690TerminalUtilities</code><br><code>rxtxComm</code><br><code>ServiceConf</code><br><code>SoaEngine</code><br><code>TransactionalMessageService</code></td>
+</tr>
+</tbody>
+</table>
+<figure>
+    <a class="glightbox" href="assets/inventario/001.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ark" src="assets/inventario/001.svg" /></a>
+    <!-- <figcaption>Arquitectura Dominio</figcaption> -->
+</figure>
+<h2 id="otros-componentesmarcados-ya-se-encuentran-deprecados">Otros componentes<br><sub><sup>(marcados ya se  encuentran deprecados)</h2>
+<ul class="task-list">
+<li>
+<p><strong><em>Carpeta \bp</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>FwOperations.jar</code></p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>GirosRemesas.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>PagosEfectivoExitoCom.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>PuntosExito.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>SecurityKey.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>TarjetasPropias.jar</code> <sub><sup>(en proceso)</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Telefonia.jar</code> <sub><sup>(en proceso)</p>
+</li>
+<li>
+<p><strong><em>Carpeta \platform</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>PinpadManaKey.jar</code> <sub><sup>(en proceso)</p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>SumaDescuentos.jar</code> <sub><sup>(ya lo hace motor)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>CargaEventos.jar</code> <sub><sup>(ya lo hace motor)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Clifre.jar</code> <sub><sup>(sigue ligado a convenios)</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>FiadoExito.jar</code></p>
+</li>
+<li>
+<p><strong><em>Carpeta \srv</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Application.jar</code></p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>DataStore.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>DigitalReceipt.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Director.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Domain.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>DomainModel.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Interface.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>J8583GrupoExito.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>KeyedReader.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Maintenance.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>MaintenanceModel.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>MessagingHandler.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>MessagingHandlerISO.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>SecurityService.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>ServiceConf.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>SoaEngine.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>TerminalPersistence.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>TransactionalMessageService.jar</code></li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>ValidationResponseRevertionStatus.jar</code></p>
+</li>
+<li>
+<p><strong><em>Carpeta \libs</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>AbsoluteLayout-RELEASE160.jar</code></p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>AEFExtension.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Antlr-2.7.6.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>aopalliance-repackaged-2.5.0-b32.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>apiguardian-api-1.1.2.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Backport-util-concurrent.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-anim-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-awt-util-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-bridge-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-codec-1.9.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-constants-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-css-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-dom-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-ext-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-gvt-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-i18n-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-parser-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-script-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-shared-resources-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-svg-dom-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-svggen-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-transcoder-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-util-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>batik-xml-1.16.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Bbrv.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>BeanShell.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Biometria.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>comm-2.0-2.0.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>comm4690-1.0.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Commons-beanutils-1.7.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Commons-collections-3.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Commons-collections-3.2.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>commons-io-2.11.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Commons-lang-2.4.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Commons-logging-1.1.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Commons-logging.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Commons-net.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>core-3.4.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>DisplayQRCode.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Dom4j-1.6.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Ezmorph-1.0.6.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Freemarker-2.3.23.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>FwUtil.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>GenerateQRCodeStandAlone.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Gson-2.8.2.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>hamcrest-core-1.3.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Hibernate-core-3.3.2.GA.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Hk2-Api-2.5.0-b32.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Hk2-Locator-2.5.0-b32.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Hk2-Utils-2.5.0-b32.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Hsqldb-1.7.3.3.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Annotations-2.8.4.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Annotations-2.9.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Core-2.9.4.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Core-2.9.6.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Databind-2.9.6.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Jaxrs-Base-2.8.4.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Jaxrs-Json-Provider-2.8.4.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jackson-Module-Jaxb-Annotations-2.8.4.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>jai-imageio-core-1.4.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>jattach-4.1.1010.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>javase-3.4.0.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Javassist-3.4.GA.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Javax.annotation-Api-1.2.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Javax.inject-2.5.0-b32.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Javax.ws.rs-Api-2.0.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jcl-over-slf4j-1.6.6.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>jcommander-1.72.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jdom.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Client-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Common-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Container-Servlet-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Container-Servlet-Core-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Entity-Filtering-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Guava-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Media-Jaxb-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Media-Json-Jackson-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jersey-Server-2.25.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Json-lib-2.2.3.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Jta-1.1.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Libase-1.3.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Log4j-1.2.17.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Modelo.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Os4690TerminalUtilities.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>PackFunction.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Persist.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>PinpadService.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Presentacion.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>PrintExtension.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Reactive-Streams-1.0.2.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Reactor-Core-3.2.3.RELEASE.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>Reportes.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Serial.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Slf4j-api-1.6.6.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Slf4j-log4j12-1.6.6.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>SmartMod.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Spring.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Xerces.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Xml-apis-1.0.b2.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>xml-apis-ext-1.3.04.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>xmlgraphics-commons-2.7.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>xpp3_min-1.1.3.4.O.jar</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>Xstream-1.1.2.jar</code></li>
+</ul>
+<h2 id="comentarios">Comentarios</h2>
+<ul>
+<li>Que funcionalidades están en Framework actualmente y se encuentran migrados o proximos a migrar</li>
+</ul>
+<h3 id="servicios-migrados">Servicios migrados</h3>
+<ul>
+<li>Giros</li>
+<li>Pines</li>
+<li>Puntos Exito</li>
+<li>Suma descuentos <sub><sup>(migrado en Motor de promociones)</li>
+<li>Carga eventos <sub><sup>(migrado en Motor de promociones)</li>
+<li>Todos los <code>HCH</code> relacionados del lado del <code>PAF</code></li>
+</ul>
+<h3 id="proximos-a-migrar">Próximos a Migrár</h3>
+<ul>
+<li>Telefonia.jar</li>
+<li>Pinpad</li>
+<li>Fiado Exito</li>
+<li>
+<p>Todos los <code>HCH</code> relacionados del lado del <code>PAF</code></p>
+</li>
+<li>
+<p>Consideración de nuevos servicios o reutilización de servicios del lado del servidor de aplicaciones. Evaluar descontinuacion del PAF</p>
+</li>
+<li>
+<p>Pendiente (Alinear con arquitectura de lo ya migrado - objetivo es reutilización de componentes)</p>
+</li>
+<li>
+<p>¿Que actores salen?<br><sub><sup>(falta por definir la correspondencia con cada uno de los servicios.)</p>
+</li>
+</ul>
+<figure>
+    <a class="glightbox" href="assets/inventario/002.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ark" src="assets/inventario/002.svg" /></a>
+    <!-- <figcaption>Arquitectura Dominio</figcaption> -->
+</figure>
+<h3 id="hay-reduccion-de-codigo-del-lado-de-basic-llamados-retiro-de-modulos">¿Hay reducción de código del lado de BASIC, llamados, retiro de módulos?</h3>
+<ul>
+<li>Pendiente (Se necesita conocer los flujos para saber si hay interacción con componentes Basic)</li>
+</ul>
+<h3 id="estrategia-de-logs">Estrategia de Logs</h3>
+<ul>
+<li>Definir si se deben llevar log independientes por servicio o uno solo como está actualmente.</li>
+</ul>
+<h3 id="en-la-medida-del-analisis-dimensionar-que-otros-recursos-vamos-a-necesitar">En la medida del análisis dimensionar que otros recursos vamos a necesitar</h3>
+<ul>
+<li>Realización de pruebas para observar los flujos y otros componentes que puedan interactuar.</li>
+<li>Recursos de <code>autorizadores</code></li>
+<li>Set de pruebas</li>
+</ul>
+<h3 id="evaluacion-de-tecnologias-alternativas">Evaluacion de tecnologias alternativas</h3>
+<ul>
+<li>Pendiente (Se consideraría segun las pruebas de flujo actual)</li>
+</ul>
+<h3 id="lista-tentativa-de-repositorios-a-dar-de-baja">Lista tentativa de repositorios a dar de baja</h3>
+<ul>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-reglasTerminal-term-BbRulesValidator">BbRulesValidator</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-eventos-term-CargaEventos">CargaEventos</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-clifre-termFw-clifre">clifre</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-autoriza-contPAFActor-fastpay">fastpay</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-tarjetaFiado-termFw-FiadoExito">FiadoExito</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-libreriaUtilidades-termDominioPromo-FwUtil">FwUtil</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-giroRemesa-termFw-GirosRemesas">GirosRemesas</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-entregaCasa-contPAFHCH-hchcidom">hchcidom</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-ventaContenido-contPAFHCH-hchconte">hchconte</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-facturador-contPAFHCH-hchfac">hchfac</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-giro-contPAFHCH-hchgiros">hchgiros</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-puntosCol-contPAFHCH-hchpc">hchpc</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-pinExito-contPAFHCH-hchpines">hchpines</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-movilExito-contPAFHCH-hchtel">hchtel</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-tarjetaRegalo-contPAFHCH-hchtr">hchtr</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-modeloDB-termFw-Modelo">Modelo</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-pinesVirtual-term-Fw-PagosEfectivoExitoCom">PagosEfectivoExitoCom</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-actualizacionPinPad-term-PinpadManaKey">PinpadManaKey</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-driverPinPad-term-PinpadService">PinpadService</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-presentacion-termFw-Presentacion">Presentacion</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-propiedades-termFw-properties">properties</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-redencion-termFw-PuntosExito">PuntosExito</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-descuentos-term-SumaDescuentos">SumaDescuentos</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-tarjetas-termFw-TarjetasPropias">TarjetasPropias</a></li>
+<li><a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-telefoniaExito-termFw-Telefonia">Telefonia</a></li>
+</ul>
+<h2 id="pros-y-contras">Pros y Contras</h2>
+<h3 id="pros">Pros</h3>
+<ul>
+<li>Mantenibilidad.</li>
+<li>Refactorización de cara a mejorar el rendimiento.</li>
+<li>Posibilidad de implemetar Pruebas Unitarias.</li>
+<li>Depuración de código y componentes obsoletos o huerfanos.</li>
+<li>Depuracion en la precarga</li>
+</ul>
+<h3 id="contras">Contras</h3>
+<ul>
+<li>Riesgo de inestabilidad en el servicio.</li>
+<li>Depuracion de reportes</li>
+<li>Configuracion de <code>ATN</code></li>
+<li>convivencia de ambos (switch de funcionalidad)</li>
+</ul>
+<h3 id="riesgos">Riesgos</h3>
+<ul>
+<li>inclusión de recursos no disponibles</li>
+<li>Costos no contemplados en esta etapa</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Linea Datascan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

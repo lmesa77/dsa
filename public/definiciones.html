@@ -1,0 +1,1858 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmesa.gitlab.io/doc-nueva-arquitectura/definiciones.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="serv-app.html">
+      
+      
+      <link rel="icon" href="assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Arquitectura de dominio basada en Microservicios - Nueva Arquitectura</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#servicesdomainarquitectura-de-dominio-basada-en-microservicios" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Nueva Arquitectura" class="md-header__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nueva Arquitectura
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arquitectura de dominio basada en Microservicios
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 6v12h8V6H8m6 4h-4V8h4v2m5.4-8.4C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="black"  aria-label="Oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.4 1.6C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18M8 6v12h8V6H8m7 11H9V7h6v10m-5-3h4v2h-4v-2Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Nueva Arquitectura" class="md-nav__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    Nueva Arquitectura
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Definiciones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Definiciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Arquitectura de dominio basada en Microservicios
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="definiciones.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de dominio basada en Microservicios
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directrices-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directrices Generales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receta-propuesta-para-abordar-la-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Receta" propuesta para abordar la solución
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-secuencia-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de secuencia general
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminalgateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      TerminalGateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datacollector" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataCollector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devicehandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeviceHandler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParameterStore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localparameterstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      LocalParameterStore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domainengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      DomainEngine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jbadapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      JBAdapter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aefadapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      AEFAdapter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologías
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patrones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patrones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-puertos-y-adaptadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura de puertos y adaptadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitectura de puertos y adaptadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de dominio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de aplicación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-infraestructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de infraestructura
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaffolding-basado-en-arquitectura-de-puertos-y-adaptadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaffolding basado en arquitectura de puertos y adaptadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scaffolding basado en arquitectura de puertos y adaptadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quien-eres-y-de-que-tipo-vertical-slicing-screaming-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quién eres y de qué tipo (Vertical Slicing - Screaming Arch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-arquetipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de Arquetipos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seguridad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reingenieria-de-procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reingenieria de procesos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="serv-app.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servidor de Aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="venta-contenido.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Venta de contenidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dicc-datos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diccionario de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bitacora.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bitácora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="inventario.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pruebas de concepto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glosario.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glosario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="links.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links de Interés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backlog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación Técnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación Técnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/documentacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de Servicios de Dominio DSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/mensaje.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La Clase BaseMessage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/componentes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/excepciones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manejo de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/estructura-carpetas.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura de Carpetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/trazabilidad.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trazabilidad Operativa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/arquitectura-limpia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura Limpia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/patron-pipeline.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patrón Pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#directrices-generales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directrices Generales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#receta-propuesta-para-abordar-la-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Receta" propuesta para abordar la solución
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama-de-secuencia-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama de secuencia general
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#terminalgateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      TerminalGateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datacollector" class="md-nav__link">
+    <span class="md-ellipsis">
+      DataCollector
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devicehandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      DeviceHandler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameterstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParameterStore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localparameterstore" class="md-nav__link">
+    <span class="md-ellipsis">
+      LocalParameterStore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#domainengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      DomainEngine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jbadapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      JBAdapter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aefadapter" class="md-nav__link">
+    <span class="md-ellipsis">
+      AEFAdapter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tecnologías
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patrones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patrones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-de-puertos-y-adaptadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquitectura de puertos y adaptadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitectura de puertos y adaptadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de dominio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-aplicacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de aplicación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capa-de-infraestructura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capa de infraestructura
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaffolding-basado-en-arquitectura-de-puertos-y-adaptadores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scaffolding basado en arquitectura de puertos y adaptadores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scaffolding basado en arquitectura de puertos y adaptadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quien-eres-y-de-que-tipo-vertical-slicing-screaming-arch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quién eres y de qué tipo (Vertical Slicing - Screaming Arch)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-de-arquetipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uso de Arquetipos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#seguridad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Seguridad
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reingenieria-de-procesos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reingenieria de procesos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="servicesdomainarquitectura-de-dominio-basada-en-microservicios">ServicesDomain<br><small>Arquitectura de Dominio basada en Microservicios</small></h1>
+<p align="center"><strong>“La única forma de ir rápido es hacerlo bien”</strong> - Uncle Bob -</p>
+
+<p>La definición de esta nueva arquitectura abarca la construcción y relación de los componentes que atenderán las operaciones de <strong><em>VENTA</em></strong>, <strong><em>NO VENTA</em></strong> y <strong><em>PAGO</em></strong> siguiendo las especificaciones definidas por la dirección de SAV.</p>
+<p>En términos de investigación, reto, implementación y desempeño, representa lo siguiente:</p>
+<ol>
+<li>Construir soluciones que permitan fáciles despliegues en distintos ecosistemas (local - servidor - nube).</li>
+<li>Acercamiento a arquitecturas ya probadas como son <strong><em>ELERA</em></strong> o similares.</li>
+<li>Facilitar la implementación de tecnologías más modernas y adecuadas a los recursos existentes y futuros.</li>
+<li>Mayor flexibilidad para implementar una arquitectura heterogénea pero ordenada.</li>
+<li>Oportunidad de implementar estrategias de resiliencia del sistema.</li>
+<li>Oportunidad de implementar estrategias de monitoreo eficaces y que comuniquen.</li>
+<li>Baja dependencia de las limitantes de obsolescencia de software y hardware.</li>
+<li>Implementación de estándares del mercado en cuanto a paradigmas de programación y patrones de diseño, estas como guías conceptuales - <strong><em>No hay bala de plata -</em></strong>.</li>
+<li>Posibilidad futura de contenerizar los servicios, lo que proporciona una mayor portabilidad, gobernanza y escalabilidad sobre los mismos.</li>
+<li>Facilitar la implementación de medidas de seguridad más robustas y consistentes.</li>
+<li>Mayor facilidad al añadir o actualizar componentes en un único punto centralizado cuando sea necesario.</li>
+<li>Un <strong><em>servicio centralizado</em></strong> puede facilitar la integración con otros sistemas y servicios externos, mejorando la interoperabilidad.</li>
+<li>Promover una arquitectura saludable desarrollando software de forma orgánica.</li>
+<li>Fomentar la comprensión, la depuración y la modificación del código.</li>
+<li>Ayudar al equipo de desarrollo a trabajar mas eficientemente</li>
+<li>Gran objetivo: <strong><em>Mejorar algo que ya funciona</em></strong>. (agregar valor).</li>
+</ol>
+<h2 id="directrices-generales">Directrices Generales</h2>
+<p>Para el diseño y construcción de la nueva arquitectura se debe tener en cuenta las siguientes orientaciones:</p>
+<ol>
+<li>Sus módulos deben ser <strong><em>especializados</em></strong> en atender una y solo una funcionalidad especifica del negocio. (alta cohesión)</li>
+<li>Deben proveer un mecanismo de comunicación estándar garantizando una relación agnóstica con el resto de componentes. (bajo acoplamiento)</li>
+<li>Debe poseer en lo posible, características de <strong><em>despliegue en multiples backends</em></strong>. (Multientorno)</li>
+<li>Estandarización para una rápida integración de nuevos servicios. (Servicios orientados a la configuración)</li>
+<li>Deben basar su interacción al <strong><em>intercambio mínimo</em></strong> de <strong><em>mensajes suficientes</em></strong> para realizar su labor, garantizando su independencia y autonomía.</li>
+<li>Idealmente <strong><em>indice mas bajo de acoplamiento</em></strong> con tecnologías externas y/o servicios ajenos al core del negocio.</li>
+<li>Observar la implementación de los principios <strong><em>SOLID</em></strong>, <strong><em>KISS</em></strong> y <strong><em>DRY</em></strong> además de buenas practicas de <strong><em>CLEAN CODE</em></strong> como pilar fundamental de construcción del código.</li>
+<li><strong><em>Flexibilización</em></strong> sobre dogma.</li>
+<li>Pruebas unitarias.</li>
+<li>Documentación técnica.</li>
+<li><strong><em>Cultura de desarrollo</em></strong> (Disciplina y buenas prácticas) sobre informalidad e improvisación.</li>
+</ol>
+<p>Estos son <em>grosso modo</em> un buen punto de partida para iniciar el diseño y construcción.- <strong><em>ojo, no son dogma</em></strong> -. Es claro que el rumbo se va definiendo en el proceso de desarrollo.</p>
+<h2 id="receta-propuesta-para-abordar-la-solucion">"Receta" propuesta para abordar la solución</h2>
+<ul>
+<li>Definir el problema de manera abstracta.</li>
+<li>Pensar en la solución en términos monolíticos y luego descomponer.</li>
+<li>Representar adecuadamente las entidades del negocio.</li>
+<li>Diseñar la solución considerando la perspectiva del usuario no la dependencia tecnológica.</li>
+<li>No suponer.</li>
+<li>Cada caso de uso debe representar una funcionalidad específica del sistema.</li>
+<li>Definir la interoperabilidad con tecnologías externas mediante interfaces claras cumpliendo las definiciones de las reglas de negocio.</li>
+<li>Mantener una mentalidad abierta durante todo el proceso.</li>
+</ul>
+<h2 id="diagrama-de-secuencia-general">Diagrama de secuencia general</h2>
+<pre class="mermaid"><code>sequenceDiagram
+    autonumber
+    actor c as Cajero/POS
+    participant basic as Basic
+    participant gateway as TerminalGateway
+    participant device as DeviceHandler
+    participant collect as DataCollector
+    participant params as ParametersStore
+    participant domain as DomainEngine&lt;br&gt;(venta contenido)
+    participant autor as Prov. Externo&lt;br&gt;(Autorizador)
+    c-&gt;&gt;basic: inicia petición
+    Note right of c: registrar PLU&lt;br&gt;imprimir dato&lt;br&gt;finalizar trx&lt;br&gt;almacenar data
+    basic-&gt;&gt;gateway: activa el proceso y envía mensaje
+    Note right of basic: datos de la operación&lt;br&gt;(formato json) 
+    gateway-&gt;&gt;collect: normaliza y redirige mensaje
+    collect-&gt;&gt;params: solicita configuración
+        Note over params: los datos deben estar disponible offline
+    params--&gt;&gt;collect: envía respuesta
+    alt Necesita datos complementarios 
+        collect-&gt;&gt;device: solicita datos
+        loop Tantas veces como datos sean pedidos
+            device-&gt;&gt;c: solicita datos
+        Note over c, device: datos complementarios (según la operación)
+            c--&gt;&gt;device: devuelve datos
+        end
+        device--&gt;&gt;collect: devuelve datos
+    end
+    collect-&gt;&gt;collect: empaqueta el mensaje
+    collect-&gt;&gt;gateway:transmite mensaje
+    gateway-&gt;&gt;domain: redirige el mensaje
+    domain-&gt;&gt;domain: Aplica lógica
+    domain-&gt;&gt;autor: hace la petición
+    alt Respuesta OK
+        autor--&gt;&gt;domain: notifica
+        domain--&gt;&gt;gateway: notifica
+        gateway--&gt;&gt;basic: notifica
+        basic--&gt;&gt;c: notifica
+        c-xc: continua operación
+    else Respuesta NOK
+        autor--&gt;&gt;domain: notifica
+        domain-&gt;&gt;domain: interpreta y prepara respuesta
+        domain--&gt;&gt;gateway: notifica
+        gateway--&gt;&gt;basic: notifica
+        basic--&gt;&gt;c: notifica
+        c-xc: continua operación
+    end</code></pre>
+<figure>
+    <a class="glightbox" href="assets/new-architecture/diagram01.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tarjetas" src="assets/new-architecture/diagram01.svg" /></a>
+    <figcaption>C4</figcaption>
+</figure>
+<h2 id="componentes">Componentes</h2>
+<h3 id="terminalgateway">TerminalGateway</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Terminal</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Enfocado en la comunicación y enrutamiento de mensajes (orquestación del flujo)</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>Recibe peticiones desde un cliente, orquesta hacia el resto del flujo, responde a la petición inicial</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td>Objeto JSON/GRPC</td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td>Objecto JSON/GRPC</td>
+</tr>
+</tbody>
+</table>
+<h3 id="datacollector">DataCollector</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Terminal</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Enfocado en la gestión y manipulación de datos en la terminal</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>Solicita datos al DeviceHandler, Envía datos normalizados al TerminalGateway, Actualiza parámetros en LocalParameterStore</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="devicehandler">DeviceHandler</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Terminal</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Enfocado en la interacción con el usuario a través de dispositivos como el teclado y la pantalla</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>Solicita y muestra información al usuario via dispositivos I/O, Valida los datos ingresados según el LocalParameterStore</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameterstore">ParameterStore</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Multientorno</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Proveer las configuraciones de negocio a los módulos solicitantes mediante peticiones.</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>Comunicación con módulos cliente.</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="localparameterstore">LocalParameterStore</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Terminal</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Proveer las configuraciones de negocio a los módulos de al terminal solicitantes mediante peticiones.</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>Provee la cantidad y características de parámetros al DataCollector garantizando la alta disponibilidad</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="domainengine">DomainEngine</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Multientorno</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Proveer la lógica necesaria para manejar, transformar, calcular y enrutar los datos recibidos con el fin de entregar un resultado que satisfaga las necesidades de la operación.</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>Comunicación con módulos cliente.</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="jbadapter">JBAdapter</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Terminal</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Mediador entre JavaAPI y TerminalConfiguration</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>JavaAPI - TerminalGateway</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="aefadapter">AEFAdapter</h3>
+<table>
+<thead>
+<tr>
+<th>Definiciones</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno:</strong></td>
+<td>Terminal</td>
+</tr>
+<tr>
+<td><strong>Vocación:</strong></td>
+<td>Mediador entre AEF u otro mecanismo de persistencia del lado del POS y el DataCollector.</td>
+</tr>
+<tr>
+<td><strong>Interacciones:</strong></td>
+<td>AEF - DataCollector</td>
+</tr>
+<tr>
+<td><strong>DataInput:</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DataOutput:</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tecnologias">Tecnologías</h3>
+<ul>
+<li>BASIC</li>
+<li>Java 1.8</li>
+<li>Spring Boot 2.7.12</li>
+<li>Maven</li>
+<li>junit 5.x</li>
+<li>Mockito 3.x</li>
+<li>JaCoCo</li>
+<li>Lombok</li>
+<li>Logback (definido por equipo a cargo)</li>
+<li>tomcat / tomEE</li>
+<li>rest / grpc</li>
+<li>swagger</li>
+<li>caffeine (manejo de caché)</li>
+</ul>
+<h3 id="patrones">Patrones</h3>
+<ul>
+<li>SAGAs (acción compensatoria) coreografía u orquestación</li>
+<li>(transaccionalidad distribuida)</li>
+</ul>
+<h3 id="arquitectura-de-puertos-y-adaptadores">Arquitectura de puertos y adaptadores</h3>
+<p>Es un estilo de arquitectura de software que enfatiza la separación de la lógica de negocio de las dependencias técnicas externas. La idea es pensar en la aplicación como el artefacto central de un sistema, donde toda la entrada y salida llega o sale de la aplicación a través de un puerto que aísla la aplicación de herramientas, tecnologías y mecanismos de entrega externos. La aplicación no debería tener conocimiento de quién o qué está enviando la entrada o recibiendo su salida. Esto tiene como objetivo brindar cierta protección contra la evolución de la tecnología y los requisitos comerciales, que pueden hacer que los productos queden obsoletos poco después de su desarrollo, debido al bloqueo de la tecnología o del proveedor.</p>
+<figure>
+    <a class="glightbox" href="assets/new-architecture/hexagonal.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tarjetas" src="assets/new-architecture/hexagonal.svg" /></a>
+    <figcaption>Diagrama de puertos y adaptadores</figcaption>
+</figure>
+<h4 id="capa-de-dominio">Capa de dominio</h4>
+<p>Contiene los elementos que representan el núcleo de la lógica de negocio:</p>
+<ul>
+<li><strong><em>Entidades</em></strong>: Son objetos del modelo de dominio que tienen identidad propia y un ciclo de vida persistente. Representan conceptos del negocio y contienen tanto datos como comportamiento.</li>
+<li><strong><em>Agregados</em></strong>: Son agrupaciones de entidades relacionadas que se tratan como una unidad única para ciertas operaciones de negocio. Cada agregado tiene una entidad raíz que garantiza la consistencia del agregado.</li>
+<li><strong><em>Objetos de Valor</em></strong>: Son objetos que se definen por sus atributos en lugar de una identidad propia. Representan conceptos inmutables y pequeños, como cantidades, fechas o coordenadas.</li>
+<li><strong><em>Servicios de Dominio</em></strong>: Contienen lógica de negocio que no encaja naturalmente dentro de una entidad o un objeto de valor. Son operaciones del dominio que involucran a múltiples entidades o agregados.</li>
+<li><strong><em>Repositorios (Interfaz)</em></strong>: Definen contratos para la persistencia y recuperación de agregados y entidades. Los repositorios en la capa de dominio son solo interfaces; las implementaciones están en los adaptadores.</li>
+<li><strong><em>Fábricas</em></strong>: Son responsables de la creación compleja de objetos de dominio, especialmente cuando la creación implica múltiples pasos o dependencias entre objetos.</li>
+</ul>
+<h4 id="capa-de-aplicacion">Capa de aplicación</h4>
+<p>Actúa como intermediaria entre la capa de dominio y capa de infraestructura. Esta capa orquesta la lógica de negocio contenida en la capa de dominio, coordinando tareas y aplicando políticas.</p>
+<ul>
+<li><strong><em>Casos de Uso</em></strong>: Definen las operaciones específicas de la aplicación que un usuario puede realizar. Son métodos de alto nivel que utilizan los servicios de aplicación para ejecutar la lógica de negocio.</li>
+<li><strong><em>Servicios de Aplicación</em></strong>: Coordinan las operaciones del negocio, llamando a los servicios de dominio y manejando transacciones. No contienen lógica de negocio en sí misma, sino que orquestan las llamadas a los componentes de dominio.</li>
+<li><strong><em>DTOs</em></strong>: Transfieren datos entre las capas. Facilitan la serialización y deserialización de datos y son objetos simples sin lógica de negocio.</li>
+</ul>
+<h4 id="capa-de-infraestructura">Capa de infraestructura</h4>
+<p>Contiene todos los detalles técnicos y las implementaciones concretas necesarias para que la aplicación funcione correctamente. Esta capa se encarga de proporcionar la infraestructura necesaria para soportar las operaciones definidas en las capas de aplicación y dominio.</p>
+<ul>
+<li><strong><em>Implementaciones de Repositorios</em></strong>: Implementan las interfaces de repositorio definidas en la capa de dominio, utilizando tecnologías específicas.</li>
+<li><strong><em>Servicios de Infraestructura</em></strong>: Proveen integración con sistemas externos, manejo de archivos, etc.</li>
+<li><strong><em>Adaptadores de Entrada y Salida</em></strong>: Implementan la lógica para comunicarse con sistemas externos (adaptadores de salida) y para recibir comunicaciones de sistemas externos o interfaces de usuario (adaptadores de entrada).</li>
+<li><strong><em>Configuración</em></strong>: Incluye archivos de configuración, configuración de dependencias, configuración de beans de Spring, etc.</li>
+<li><strong><em>Módulos de Seguridad</em></strong>: Manejan la autenticación y autorización de usuarios y servicios.</li>
+</ul>
+<h3 id="scaffolding-basado-en-arquitectura-de-puertos-y-adaptadores">Scaffolding basado en arquitectura de puertos y adaptadores</h3>
+<h4 id="quien-eres-y-de-que-tipo-vertical-slicing-screaming-arch">Quién eres y de qué tipo (Vertical Slicing - Screaming Arch)</h4>
+<p><strong><em>Vertical Slicing</em></strong> es una técnica de desarrollo que divide una aplicación en incrementos funcionales completos, cada uno abarcando todas las capas necesarias (UI, lógica de negocio y persistencia) para entregar valor de manera incremental y reducir riesgos. <strong><em>Screaming Architecture</em></strong>, sugiere que la estructura del software debe reflejar claramente su propósito y dominio, con módulos organizados según los conceptos del negocio en lugar de detalles técnicos, lo que mejora la comprensión, mantenibilidad y flexibilidad del sistema.</p>
+<h4 id="uso-de-arquetipos">Uso de Arquetipos</h4>
+<p>Un arquetipo asegura que todos los proyectos sigan una estructura coherente, elimina la configuración manual inicial, simplifica el arranque con un solo comando, y permite personalización y extensión según las necesidades específicas del proyecto.</p>
+<ul>
+<li>Estándares Consistentes.</li>
+<li>Ahorro de Tiempo.</li>
+<li>Facilidad de Uso.</li>
+<li>Flexibilidad.</li>
+</ul>
+<figure>
+    <a class="glightbox" href="assets/new-architecture/scaffolding.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tarjetas" src="assets/new-architecture/scaffolding.svg" /></a>
+    <figcaption>Arq. de puertos y adaptadores</figcaption>
+</figure>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a>|   .gitignore
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>|   pom.xml
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>|   README.md
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>|
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>+---src
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    +---main
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>    |   +---java
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>    |   |   \---com
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>    |   |       \---lds
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>    |   |           \---exito
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>    |   |               \---servicesdomain
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>    |   |                   \---nombre_aplicacion
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>    |   |                       |   ServicesDomainApplication.java
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>    |   |                       |   ServletInitializer.java
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>    |   |                       |
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>    |   |                       +---application
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>    |   |                       |   +---exceptions
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>    |   |                       |   |
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a>    |   |                       |   \---usescases
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>    |   |                       |
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>    |   |                       +---domain
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>    |   |                       |   +---exceptions
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>    |   |                       |   |
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>    |   |                       |   +---models
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>    |   |                       |   |
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>    |   |                       |   \---ports
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>    |   |                       |       +---input
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>    |   |                       |       |
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>    |   |                       |       \---output
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>    |   |                       |
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a>    |   |                       +---infraestructure
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>    |   |                       |   +---adapters
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>    |   |                       |   |   +---input
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>    |   |                       |   |   |
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>    |   |                       |   |   \---output
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>    |   |                       |   |
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>    |   |                       |   +---configuration
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>    |   |                       |   |       OpenApiConfig.java
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>    |   |                       |   |
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>    |   |                       |   \---exceptions
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a>    |   |                       |
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>    |   |                       \---utils
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a>    |   |
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a>    |   \---resources
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a>    |       |   application.properties
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a>    |       |   logback.xml
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a>    |       |
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a>    |       +---static
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a>    |       \---templates
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a>    \---test
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a>        \---java
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>            \---com
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a>                \---lds
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a>                    \---exito
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a>                        \---servicesdomain
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a>                            \---base_exito_services_domain
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a>                                    ServicesDomainApplicationTests.java
+</span></code></pre></div></td></tr></table></div>
+<h3 id="seguridad">Seguridad</h3>
+<p>Desde el concepto de las seis capas de defensa, implementar protocoles que abarquen protección en los niveles de:</p>
+<p>Aplicación:</p>
+<ul>
+<li>validación de entradas</li>
+<li>control de versiones en la gestión de dependencias</li>
+<li>Análisis del código estático con herramientas como el SONAR.</li>
+<li>Manejo adecuado de errores y excepciones.</li>
+<li>Observabilidad</li>
+</ul>
+<p>Datos:</p>
+<ul>
+<li>Cifrado</li>
+<li>Copias de seguridad y respaldo</li>
+<li>Clasificación de datos según su sensibilidad (ofuscación)</li>
+</ul>
+<h3 id="reingenieria-de-procesos">Reingenieria de procesos</h3>
+<p>Pensar si se da la oportunidad, en reestructurar algunos subprocesos y conjunto de datos buscando la optimización, jerarquía y tipo dentro del universo de la operación.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Linea Datascan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

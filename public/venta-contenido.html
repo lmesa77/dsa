@@ -1,0 +1,2147 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmesa.gitlab.io/doc-nueva-arquitectura/venta-contenido.html">
+      
+      
+        <link rel="prev" href="serv-app.html">
+      
+      
+        <link rel="next" href="dicc-datos.html">
+      
+      
+      <link rel="icon" href="assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Venta de contenidos - Nueva Arquitectura</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#venta-contenido" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Nueva Arquitectura" class="md-header__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nueva Arquitectura
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Venta de contenidos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 6v12h8V6H8m6 4h-4V8h4v2m5.4-8.4C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="black"  aria-label="Oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.4 1.6C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18M8 6v12h8V6H8m7 11H9V7h6v10m-5-3h4v2h-4v-2Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Nueva Arquitectura" class="md-nav__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    Nueva Arquitectura
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Definiciones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Definiciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="definiciones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de dominio basada en Microservicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="serv-app.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servidor de Aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Venta de contenidos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="venta-contenido.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Venta de contenidos
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capitulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capítulos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capítulos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-datos-desde-el-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de datos desde el cliente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada de datos desde el cliente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payload-del-lado-de-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload del lado de Basic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload-del-lado-del-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload del lado del Dominio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atributos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voucher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voucher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacen-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Almacén de Datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mecanismo-de-configuracion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mecanismo de configuracion de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-de-entrada-desde-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datos de entrada (desde POS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload-de-salida-hacia-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload de salida (hacia POS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dicc-datos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diccionario de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bitacora.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bitácora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="inventario.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pruebas de concepto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glosario.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glosario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="links.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links de Interés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backlog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación Técnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación Técnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/documentacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de Servicios de Dominio DSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/mensaje.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La Clase BaseMessage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/componentes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/excepciones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manejo de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/estructura-carpetas.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura de Carpetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/trazabilidad.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trazabilidad Operativa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/arquitectura-limpia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura Limpia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/patron-pipeline.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patrón Pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capitulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capítulos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capítulos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-datos-desde-el-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de datos desde el cliente
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada de datos desde el cliente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payload-del-lado-de-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload del lado de Basic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload-del-lado-del-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload del lado del Dominio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atributos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Atributos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#producto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Producto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#referencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#valor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Valor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voucher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voucher
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#almacen-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Almacén de Datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mecanismo-de-configuracion-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mecanismo de configuracion de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datos-de-entrada-desde-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datos de entrada (desde POS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payload-de-salida-hacia-pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payload de salida (hacia POS)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="venta-contenido">Venta Contenido</h1>
+<h2 id="capitulos">Capítulos</h2>
+<h3 id="entrada-de-datos-desde-el-cliente">Entrada de datos desde el cliente</h3>
+<h4 id="payload-del-lado-de-basic">Payload del lado de Basic</h4>
+<p>Para venta de contenido general llega la siguiente información:</p>
+<figure>
+    <a class="glightbox" href="assets/ventas-contenidos/cab-vent-recarga.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="imagen" src="assets/ventas-contenidos/cab-vent-recarga.png" width="600" /></a>
+    <figcaption>Datos generales recarga</figcaption>
+</figure>
+<figure>
+    <a class="glightbox" href="assets/ventas-contenidos/body-vent-recarga.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="imagen" src="assets/ventas-contenidos/body-vent-recarga.png" width="600" /></a>
+    <figcaption>Datos complementarios recarga</figcaption>
+</figure>
+<figure>
+    <a class="glightbox" href="assets/ventas-contenidos/cab-vent-general.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="imagen" src="assets/ventas-contenidos/cab-vent-general.png" width="600" /></a>
+    <figcaption>Datos generales general</figcaption>
+</figure>
+<figure>
+    <a class="glightbox" href="assets/ventas-contenidos/body-vent-general.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="imagen" src="assets/ventas-contenidos/body-vent-general.png" width="600" /></a>
+    <figcaption>Datos complementarios general</figcaption>
+</figure>
+<h4 id="payload-del-lado-del-dominio">Payload del lado del Dominio</h4>
+<figure>
+    <a class="glightbox" href="assets/ventas-contenidos/body-vent-general-dominio.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="imagen" src="assets/ventas-contenidos/body-vent-general-dominio.png" width="600" /></a>
+    <figcaption>Datos complementarios general</figcaption>
+</figure>
+<h4 id="atributos">Atributos</h4>
+<h5 id="producto">Producto</h5>
+<ul>
+<li>nombre (String)</li>
+<li>PLU (String)</li>
+<li>EAN (String)</li>
+<li>hchId (String)</li>
+<li>tipoContenido (String)s</li>
+<li>codigoProducto (String)</li>
+<li>permiteAnulacion (boolean)</li>
+<li>permiteConsulta (boolean)</li>
+<li>referencia (Referencia)</li>
+<li>valor (Valor)</li>
+<li>voucher (Voucher)</li>
+</ul>
+<h4 id="referencia">Referencia</h4>
+<ul>
+<li>solicitaReferencia (boolean)</li>
+<li>expresionRegular (String)</li>
+<li>iLongitud (int)</li>
+<li>iPrefijo (int)</li>
+</ul>
+<h4 id="valor">Valor</h4>
+<ul>
+<li>expresionRegular (String)</li>
+</ul>
+<h4 id="voucher">Voucher</h4>
+<ul>
+<li>titulo (String)</li>
+<li>PieVoucherInicial (String)</li>
+<li>PieVoucherFinal (String)</li>
+</ul>
+<h4 id="almacen-de-datos">Almacén de Datos</h4>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AdditionalData</td>
+<td>Información adicional que retorna un pago o item [Solo para tarjetas propias]</td>
+</tr>
+<tr>
+<td>AdditionalFeatures</td>
+<td>Caracteristicas adicionales del item o del pago</td>
+</tr>
+<tr>
+<td>addNewVariablesToReport</td>
+<td>Caracteristicas adicionales del ítem o del pago</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>Valor de el pago, item o nosale</td>
+</tr>
+<tr>
+<td>AnulationStatus</td>
+<td>Identifica el Estado de la Anulacion</td>
+</tr>
+<tr>
+<td>AnulationType</td>
+<td>Identifica el Tipo de Anulacion</td>
+</tr>
+<tr>
+<td>AuthEndProduct</td>
+<td>parametro para indicar si el authend se realizara por producto</td>
+</tr>
+<tr>
+<td>AuthorizationBus</td>
+<td>Identifica el bus de autorizaciones que debe usar el producto</td>
+</tr>
+<tr>
+<td>AuthorizationClassName</td>
+<td>Identifica la clase para la autorizacion.</td>
+</tr>
+<tr>
+<td>AuthorizationDetails</td>
+<td>Mapa de detalles de la autorización</td>
+</tr>
+<tr>
+<td>AuthorizationIsRequired</td>
+<td>Indica si requiere autorizacion el item</td>
+</tr>
+<tr>
+<td>AuthorizationRequired</td>
+<td>Identifica si se debe de autorizar alguna operacion</td>
+</tr>
+<tr>
+<td>AuthorizationStatus</td>
+<td>Identifica el estado de la autorizacion</td>
+</tr>
+<tr>
+<td>AuthorizationType</td>
+<td>Identifica el tipo de autorizacion</td>
+</tr>
+<tr>
+<td>AuthorizationValidatorClassName</td>
+<td>Identifica la clase validador de respuestas en autorización.</td>
+</tr>
+<tr>
+<td>AuthorizerPort</td>
+<td>Puerto del autorizador</td>
+</tr>
+<tr>
+<td>AuthOrReverse</td>
+<td>Identifica si la operacion fue exitosa al autorizar o hacer el reverso</td>
+</tr>
+<tr>
+<td>AvailablePoints</td>
+<td>Puntos disponibles</td>
+</tr>
+<tr>
+<td>BillableData</td>
+<td>Billable</td>
+</tr>
+<tr>
+<td>BillingModality</td>
+<td>Código de modalidad de facturación</td>
+</tr>
+<tr>
+<td>BinTp</td>
+<td>Codigo del barcode capturado para tarjetas propias</td>
+</tr>
+<tr>
+<td>ButcheryCommandBarcode</td>
+<td>Barcode that identifies the butchery command</td>
+</tr>
+<tr>
+<td>CardNumber</td>
+<td>Card number</td>
+</tr>
+<tr>
+<td>CashierId</td>
+<td>Numero de identificación del cajero</td>
+</tr>
+<tr>
+<td>CashierName</td>
+<td>Nombre del cajero</td>
+</tr>
+<tr>
+<td>CATALOG</td>
+<td>identificador tarjeta regalo con catalogo</td>
+</tr>
+<tr>
+<td>ClassNameQueryAuthEndProductName</td>
+<td>clase por defecto para la consulta de authend</td>
+</tr>
+<tr>
+<td>ClifredCed</td>
+<td>Dato de ClifredCed</td>
+</tr>
+<tr>
+<td>ClifredOn</td>
+<td>Dato de ClifredOn</td>
+</tr>
+<tr>
+<td>consecutiveStatus</td>
+<td>Identifica bloqueo por consecutivo fiscal</td>
+</tr>
+<tr>
+<td>CONVENIO</td>
+<td>Identificador del convenio para la tarjeta regalo con catalogo</td>
+</tr>
+<tr>
+<td>CustomerBalance</td>
+<td>Saldo disponible del cliente</td>
+</tr>
+<tr>
+<td>CustomerDetails</td>
+<td>Mapa de detalles del customer</td>
+</tr>
+<tr>
+<td>CustomerEmployeeDiscountId</td>
+<td>Identificador de descuento del cliente</td>
+</tr>
+<tr>
+<td>CustomerId</td>
+<td>Numero de identificacion del cliente</td>
+</tr>
+<tr>
+<td>CustomerName</td>
+<td>Nombre del cliente</td>
+</tr>
+<tr>
+<td>customerQueryRappi</td>
+<td>Consulta del CustomerQuery de RappiPayless</td>
+</tr>
+<tr>
+<td>CustomerType</td>
+<td>Tipo de cliente</td>
+</tr>
+<tr>
+<td>CustomerTypeId</td>
+<td>Tipo de documento del cliente</td>
+</tr>
+<tr>
+<td>CustomerVentaStaff</td>
+<td>Tipo trx de venta</td>
+</tr>
+<tr>
+<td>custumerDetails</td>
+<td>Mapa de detalles del customer</td>
+</tr>
+<tr>
+<td>DataAdminVariables</td>
+<td>Variables capturadas en las operaciones no sale Administrativas</td>
+</tr>
+<tr>
+<td>DataCaptureVariables</td>
+<td>Variables solicitadas en el datacapture</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>Dato de fecha</td>
+</tr>
+<tr>
+<td>Dependence</td>
+<td>Dependencia</td>
+</tr>
+<tr>
+<td>DescriptorTag</td>
+<td>Indica el tag del descriptor. Este tag se usa para reconocer el tipo de descriptor PaymentItemDescription, TransactionRecord o LogRecord</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>Identificador de dispositivo externo</td>
+</tr>
+<tr>
+<td>DigitalReceiptIndicator</td>
+<td>Tirilla Digital</td>
+</tr>
+<tr>
+<td>DocumentType</td>
+<td>Simple document type</td>
+</tr>
+<tr>
+<td>ElectronicJournals</td>
+<td>IDs de descriptores para registrar en el log de soporte electronico</td>
+</tr>
+<tr>
+<td>ElectronicLogRecord</td>
+<td>UserString generado para pago o item</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Correo electronico</td>
+</tr>
+<tr>
+<td>EndDate</td>
+<td>Fecha final de la resolución</td>
+</tr>
+<tr>
+<td>EndRange</td>
+<td>Rango final del consecutivo fiscal</td>
+</tr>
+<tr>
+<td>Event</td>
+<td>Codigo de evento, nosale</td>
+</tr>
+<tr>
+<td>EventBolsillo</td>
+<td>Dato de evento bolsillo</td>
+</tr>
+<tr>
+<td>EventCod</td>
+<td>Dato telefono</td>
+</tr>
+<tr>
+<td>EventCodeQuota</td>
+<td>Codigo evento Descuento Empleado</td>
+</tr>
+<tr>
+<td>EventData</td>
+<td>Dato de evento, nosale</td>
+</tr>
+<tr>
+<td>EventName</td>
+<td>Dato nombre de evento</td>
+</tr>
+<tr>
+<td>ExpiricyDatePoints</td>
+<td>Fecha de expiracion de los puntos</td>
+</tr>
+<tr>
+<td>ExternalApprovalCode</td>
+<td>Código de aprobación de autorizador externo</td>
+</tr>
+<tr>
+<td>FiscalConsecutiveNumber</td>
+<td>Consecutivo fiscal</td>
+</tr>
+<tr>
+<td>FiscalNumber</td>
+<td>Numero fiscal</td>
+</tr>
+<tr>
+<td>FiscalTicketNumber</td>
+<td>Numero de tikete fiscal</td>
+</tr>
+<tr>
+<td>Footers</td>
+<td>Lista de IDs para vouchers tipo footer (atados a la tirilla)</td>
+</tr>
+<tr>
+<td>Frank</td>
+<td>franqueo</td>
+</tr>
+<tr>
+<td>Frank</td>
+<td>String de franqueo</td>
+</tr>
+<tr>
+<td>HabeasDataIndicator</td>
+<td>Estado del habeas data</td>
+</tr>
+<tr>
+<td>IdDevueltas</td>
+<td>Variable que guardara la cedula para devueltas monedero</td>
+</tr>
+<tr>
+<td>IndTypeValidation</td>
+<td>Inidicador tipo de validacion a realizar</td>
+</tr>
+<tr>
+<td>InitialRange</td>
+<td>Rango inicial del consecutivo fiscal</td>
+</tr>
+<tr>
+<td>InputType</td>
+<td>Input method</td>
+</tr>
+<tr>
+<td>InternalOperationVersion</td>
+<td>Variable para identificar en los llamados entre capas, la version de la operacion a realizar</td>
+</tr>
+<tr>
+<td>IsAddNewVariableToReports</td>
+<td>Valida si debe agregar nuevas variables al PaymentDetail</td>
+</tr>
+<tr>
+<td>IsJoinableTrace</td>
+<td>Indica si el mensaje de una autorización se debe unir con varios ítems (no aplica para pagos)</td>
+</tr>
+<tr>
+<td>IsRecoveryConsult</td>
+<td>Indica si la transaccion de recovery es solo de consulta</td>
+</tr>
+<tr>
+<td>ItemDescription</td>
+<td>Descripcion del item</td>
+</tr>
+<tr>
+<td>ItemDetails</td>
+<td>Mapa de detalles del item</td>
+</tr>
+<tr>
+<td>ItemDiscountIva</td>
+<td>Descuento por iva diferencial</td>
+</tr>
+<tr>
+<td>ItemExtension</td>
+<td>Extension funcional del item</td>
+</tr>
+<tr>
+<td>ItemExtensionAlternative</td>
+<td>Extension funcion alterna del item</td>
+</tr>
+<tr>
+<td>ItemPrice</td>
+<td>Precio del item</td>
+</tr>
+<tr>
+<td>ItemQuantity</td>
+<td>Cantidad del item</td>
+</tr>
+<tr>
+<td>ItemType</td>
+<td>modo de venta del item</td>
+</tr>
+<tr>
+<td>Journal</td>
+<td>Journal en el login de la terminal</td>
+</tr>
+<tr>
+<td>Key</td>
+<td>Indica un id de tecla que se está ejecutando en el momento del pago</td>
+</tr>
+<tr>
+<td>LastStatus</td>
+<td>Último status retornado al servicio externo</td>
+</tr>
+<tr>
+<td>LenMax</td>
+<td>OUTGOIN</td>
+</tr>
+<tr>
+<td>LenMin</td>
+<td>OUTGOIN</td>
+</tr>
+<tr>
+<td>LineDescriptor</td>
+<td>Descriptor para el item o el pago</td>
+</tr>
+<tr>
+<td>Max</td>
+<td>OUTGOIN</td>
+</tr>
+<tr>
+<td>Min</td>
+<td>OUTGOIN</td>
+</tr>
+<tr>
+<td>MonthsValidity</td>
+<td>Meses de validación de la resolución</td>
+</tr>
+<tr>
+<td>NegativeElectronicJournals</td>
+<td>IDs de descriptores para registrar en el log de soporte electronico</td>
+</tr>
+<tr>
+<td>NegativeFooters</td>
+<td>Lista de IDs para vouchers tipo footer (atados a la tirilla)</td>
+</tr>
+<tr>
+<td>NegativeFrank</td>
+<td>franqueo negativo</td>
+</tr>
+<tr>
+<td>NegativePaymentItemDescription</td>
+<td>Descripcion del medio de pago para la tirilla</td>
+</tr>
+<tr>
+<td>NegativeRecoveryRecord</td>
+<td>IDs de descriptor de recuperacion de registro de operacion extendida en la transaccion</td>
+</tr>
+<tr>
+<td>NegativeTraceIdentificator</td>
+<td>Identificador del mensaje negativo para autorización</td>
+</tr>
+<tr>
+<td>NegativeTransactionRecords</td>
+<td>IDs de descriptores de registro de operacion en la transaccion</td>
+</tr>
+<tr>
+<td>NegativeVouchers</td>
+<td>Lista de IDs para vouchers tipo voucher (no atados a la tirilla)</td>
+</tr>
+<tr>
+<td>NewVlr</td>
+<td>Valor nuevo capturado para responderle a basic</td>
+</tr>
+<tr>
+<td>NoSaleOperation</td>
+<td>Nombre de operacion de no venta</td>
+</tr>
+<tr>
+<td>NoSaleOperationDetails</td>
+<td>Detalle de la operacion de no venta</td>
+</tr>
+<tr>
+<td>NoSaleOperationIdentificator</td>
+<td>Identificador del registro de la operacion de no venta para recovery</td>
+</tr>
+<tr>
+<td>Nut</td>
+<td>Nut de la operacion realizada, solo aplica para retornos desde la capa de dominio</td>
+</tr>
+<tr>
+<td>OgEvent</td>
+<td>Primer codigo de evento, nosale</td>
+</tr>
+<tr>
+<td>OMSCustomerId</td>
+<td>OMS customer ID</td>
+</tr>
+<tr>
+<td>OMSDocumentType</td>
+<td>OMS document type</td>
+</tr>
+<tr>
+<td>OperatorId</td>
+<td>login del cajero</td>
+</tr>
+<tr>
+<td>orderId</td>
+<td>Order ID entregado por RappiPayless</td>
+</tr>
+<tr>
+<td>OriginalTerminalNumber</td>
+<td>Numero de la terminal</td>
+</tr>
+<tr>
+<td>OriginalTransactionNumber</td>
+<td>Numero de la transaccion</td>
+</tr>
+<tr>
+<td>PasswordIndicator</td>
+<td>Estado de la clave del cliente</td>
+</tr>
+<tr>
+<td>paymentAmmount</td>
+<td>Valor del pago realizado</td>
+</tr>
+<tr>
+<td>paymentComplement</td>
+<td>Complemento pago realizado</td>
+</tr>
+<tr>
+<td>paymentDetails</td>
+<td>Detalles extras del pago</td>
+</tr>
+<tr>
+<td>PaymentItemDescription</td>
+<td>Descripcion del medio de pago para la tirilla</td>
+</tr>
+<tr>
+<td>paymentTender</td>
+<td>codigo del medio de pago</td>
+</tr>
+<tr>
+<td>Plu</td>
+<td>Item identificator</td>
+</tr>
+<tr>
+<td>PluDiscount</td>
+<td>PluDiscount</td>
+</tr>
+<tr>
+<td>PluName</td>
+<td>Nombre de pruducto</td>
+</tr>
+<tr>
+<td>PluPrice</td>
+<td>plus con precio final</td>
+</tr>
+<tr>
+<td>PluValueList</td>
+<td>Lista de plu por valor para venta continua</td>
+</tr>
+<tr>
+<td>PluVarietyPBR</td>
+<td>Inidicador de Plu/Variedad para la tabla PRODUCTBUSINESSRULEs</td>
+</tr>
+<tr>
+<td>Pocket</td>
+<td>PocketID</td>
+</tr>
+<tr>
+<td>PointsToExpire</td>
+<td>Saldo puntos a Vencer</td>
+</tr>
+<tr>
+<td>PositiveTraceIdentificator</td>
+<td>Identificador del mensaje positivo para autorización</td>
+</tr>
+<tr>
+<td>Prefix</td>
+<td>Prefijo</td>
+</tr>
+<tr>
+<td>PrimaryPhoneNumber</td>
+<td>Numero telefonico primario del cliente</td>
+</tr>
+<tr>
+<td>ProductName</td>
+<td>parametro para indicar el nombre de un producto</td>
+</tr>
+<tr>
+<td>ProductType</td>
+<td>Identifica el tipo de producto</td>
+</tr>
+<tr>
+<td>PromotionDetails</td>
+<td>Nombre de operacion de no venta de promociones detalles</td>
+</tr>
+<tr>
+<td>PromotionOperation</td>
+<td>Nombre de operacion de no venta de promociones</td>
+</tr>
+<tr>
+<td>QrIntentionId</td>
+<td>Identifica la intención de compra con QR Bancolombia</td>
+</tr>
+<tr>
+<td>qryRappi</td>
+<td>Consulta de cliente para Rappy</td>
+</tr>
+<tr>
+<td>RecoveryLogRecord</td>
+<td>String de recuperacion generado para pago o item</td>
+</tr>
+<tr>
+<td>RecoveryOriginalTerminalNumber</td>
+<td>Numero de la terminal original para recovery</td>
+</tr>
+<tr>
+<td>RecoveryOriginalTransactionNumber</td>
+<td>Numero de la transaccion original para recovery</td>
+</tr>
+<tr>
+<td>RecoveryRecord</td>
+<td>IDs de descriptor de recuperacion de registro de operacion extendida en la transaccion</td>
+</tr>
+<tr>
+<td>ReportArray</td>
+<td>Reportes generados</td>
+</tr>
+<tr>
+<td>ReportSection</td>
+<td>Seccion del reporte (Footer o Voucher)</td>
+</tr>
+<tr>
+<td>ReportString</td>
+<td>Reporte generado</td>
+</tr>
+<tr>
+<td>RequestHttpAuthorization</td>
+<td>Mapa de parametros para authorizacion http: hostPrimary, portPrimary, uri, requestHttp</td>
+</tr>
+<tr>
+<td>RequiresItemValidation</td>
+<td>Requiere validar Item</td>
+</tr>
+<tr>
+<td>ResolutionNumber</td>
+<td>Número de resolución</td>
+</tr>
+<tr>
+<td>ResolutionStatus</td>
+<td>Estado de la resolución</td>
+</tr>
+<tr>
+<td>ResponseAutorization</td>
+<td>Identifica el estado de la autorizacion o del reverso</td>
+</tr>
+<tr>
+<td>ResponseIsoTemplate</td>
+<td>Plantilla a utilizar para respuestas de la mensajeria Iso</td>
+</tr>
+<tr>
+<td>ResponseMap</td>
+<td>Outgoing map</td>
+</tr>
+<tr>
+<td>ResponseMessage</td>
+<td>OUTGOIN</td>
+</tr>
+<tr>
+<td>ResponseMessageList</td>
+<td>Outgoing message list</td>
+</tr>
+<tr>
+<td>ResponseOption</td>
+<td>Outgoing option menu</td>
+</tr>
+<tr>
+<td>ResponseStatus</td>
+<td>Outgoing message status</td>
+</tr>
+<tr>
+<td>ReverseStatus</td>
+<td>Identifica el Estado del Reverso</td>
+</tr>
+<tr>
+<td>ReverseType</td>
+<td>Indentifica el Tipo de Reverso</td>
+</tr>
+<tr>
+<td>SecondaryPhoneNumber</td>
+<td>Numero telefónico secundario del cliente</td>
+</tr>
+<tr>
+<td>SecurityIndicator</td>
+<td>Indicador para saber si la tarjeta propia es con o sin seguridad</td>
+</tr>
+<tr>
+<td>ServiceNumber</td>
+<td>Variable que guardara el service number para monedero</td>
+</tr>
+<tr>
+<td>Sign</td>
+<td>Indica el signo de la operacion, si es TRUE es positiva y si es FALSE es negativa</td>
+</tr>
+<tr>
+<td>SignS</td>
+<td>Indica el valor de la operacion</td>
+</tr>
+<tr>
+<td>StandaloneMaintenanceStatus</td>
+<td>Estado de la validación del mantenimiento automático</td>
+</tr>
+<tr>
+<td>StandaloneMaintenanceStatusMessage</td>
+<td>Mensaje de estado de la validación del mantenimiento automático</td>
+</tr>
+<tr>
+<td>StartDate</td>
+<td>Fecha de inicio de la resolución</td>
+</tr>
+<tr>
+<td>StatusClient</td>
+<td>Estado del cliente</td>
+</tr>
+<tr>
+<td>StoreName</td>
+<td>Nombre de la tienda</td>
+</tr>
+<tr>
+<td>StoreNumber</td>
+<td>Numero de la tienda</td>
+</tr>
+<tr>
+<td>Tender</td>
+<td>código del medio de pago</td>
+</tr>
+<tr>
+<td>TerminalNumber</td>
+<td>Numero de la terminal</td>
+</tr>
+<tr>
+<td>TicCardNumber</td>
+<td>Numero de la tarjeta TIC</td>
+</tr>
+<tr>
+<td>TotalBalance</td>
+<td>Valor total restante por pagar de la transaccion</td>
+</tr>
+<tr>
+<td>TransactionLogRecord</td>
+<td>UserString generado para pago o item</td>
+</tr>
+<tr>
+<td>TransactionNumber</td>
+<td>Numero de la transaccion</td>
+</tr>
+<tr>
+<td>TransactionRecords</td>
+<td>IDs de descriptores de registro de operacion en la transaccion</td>
+</tr>
+<tr>
+<td>TsProce</td>
+<td>Identifica si estamos en un conex o en una venta normal</td>
+</tr>
+<tr>
+<td>Type1x1</td>
+<td>Dato tipo de 1x1 automático o manual</td>
+</tr>
+<tr>
+<td>TypeRecovery</td>
+<td>Identifica si el tipo de Recovery es por IPL o por Suspend</td>
+</tr>
+<tr>
+<td>TypeReq</td>
+<td>Identifica que tipo de consecutivo fiscal está activo</td>
+</tr>
+<tr>
+<td>TypeRes</td>
+<td>Tipo de captura a realizar en interacción JB en muspellheim</td>
+</tr>
+<tr>
+<td>TypeValidation</td>
+<td>Variable que guardara el tipo de validación a realizar</td>
+</tr>
+<tr>
+<td>UE</td>
+<td>User Exit</td>
+</tr>
+<tr>
+<td>UpdateDate</td>
+<td>UpdateDate</td>
+</tr>
+<tr>
+<td>UserExit</td>
+<td>Identifica la userexit donde se realiza el llamado</td>
+</tr>
+<tr>
+<td>UserString</td>
+<td>String secundario para el Tlog</td>
+</tr>
+<tr>
+<td>ValidatorReportClassName</td>
+<td>Identifica la clase validador para construcción de variables en los reportes.</td>
+</tr>
+<tr>
+<td>ValueValidation</td>
+<td>Valor que se utilizara según el tipo de validación</td>
+</tr>
+<tr>
+<td>VarName</td>
+<td>Dato nombre de valor</td>
+</tr>
+<tr>
+<td>varName</td>
+<td>Numero de código otp para pago</td>
+</tr>
+<tr>
+<td>Vlr</td>
+<td>Dato valor</td>
+</tr>
+<tr>
+<td>Vouchers</td>
+<td>Lista de IDs para vouchers tipo voucher (no atados a la tirilla)</td>
+</tr>
+</tbody>
+</table>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Payload Framework</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nn">---</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nt">code</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;128&#39;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nt">key</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nt">operacion</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;19&#39;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nt">terminal</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;180&#39;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="nt">transaccion</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0001&#39;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="nt">cons</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nt">store</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0013&#39;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="nt">active</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="nt">posFields</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="nt">BsExclusive</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="nt">FiscalNumber</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="nt">DatEnt</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;128&#39;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="nt">InTrx</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="nt">StoreName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EXT EXITO LAB</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="nt">IO</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="nt">EcrAmount</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="nt">CashierId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;22222&#39;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">  </span><span class="nt">Payments</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">  </span><span class="nt">Oper</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0000022222&#39;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="nt">UE</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;08&#39;</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">  </span><span class="nt">PluQty</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="nt">Procedencia</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span><span class="nt">TsProce</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-1&quot;</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">  </span><span class="nt">ClifreOn</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">  </span><span class="nt">Total</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">  </span><span class="nt">PluName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RECARGA ABIERTA MO</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">  </span><span class="nt">CashierName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PRUEBAS 2</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">  </span><span class="nt">Plu</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;274992&#39;</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">  </span><span class="nt">Trx</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0001&#39;</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">  </span><span class="nt">TypeReq</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">  </span><span class="nt">VarName</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0013&#39;</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">  </span><span class="nt">Vlr</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1000&#39;</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">  </span><span class="nt">FiscalTicket</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;00000000000001&#39;</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">  </span><span class="nt">operador</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;22222&#39;</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">  </span><span class="nt">fecha</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;190724&#39;</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">  </span><span class="nt">hora</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1119&#39;</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">  </span><span class="nt">horaint</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;111954953&#39;</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="nt">indiceSecuencias</span><span class="p">:</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">  </span><span class="nt">dato</span><span class="p">:</span><span class="w"> </span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-yaml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Payload Dominio</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nn">---</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="nt">ItemQuantity</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nt">DataCaptureVariables</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">dato</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nt">ItemDiscountIva</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="nt">CashierId</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0000022222&#39;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nt">OriginalTransactionNumber</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0001&#39;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="nt">ItemExtension</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;999&#39;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nt">ReverseStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOAPP</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="nt">ItemPrice</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;50000&#39;</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="nt">SignS</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nt">ProductType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ITEM</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="nt">TsProce</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-1&quot;</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="nt">ItemType</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;999&#39;</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="nt">AuthorizationType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INMDT</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="nt">ReverseType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOAPP</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nt">IdDevueltas</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0&#39;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="nt">OriginalTerminalNumber</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;180&#39;</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="nt">AuthEndProduct</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOAPPLY</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="nt">ItemDescription</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">COL NETFLIX $50.00</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="nt">IndTypeValidation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">POSVALIDATION</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="nt">LastStatus</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;1&#39;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="nt">AnulationStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NOAPP</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="nt">AnulationType</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APPLY</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="nt">Plu</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0000001126976&#39;</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="nt">ItemExtensionAlternative</span><span class="p">:</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">  </span><span class="nt">dato</span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="nt">PluVarietyPBR</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;999&#39;</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="nt">AuthorizationIsRequired</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="nt">Sign</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;true&#39;</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="nt">AuthorizationStatus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PNDNG</span>
+</span></code></pre></div></td></tr></table></div>
+<p>definir las transiciones de la maquina de estados usando un archivo de configuración externo y el uso de <code>spring-statemachine-core</code> version <code>3.2.0</code></p>
+<h3 id="mecanismo-de-configuracion-de-datos">Mecanismo de configuracion de datos</h3>
+<h3 id="datos-de-entrada-desde-pos">Datos de entrada (desde POS)</h3>
+<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">&quot;plu&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;terminalId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123&quot;</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">&quot;transactionId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1000&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="nt">&quot;cashierId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;22222&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nt">&quot;storeId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0013&quot;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">&quot;date&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;20240725&quot;</span><span class="p">,</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="nt">&quot;time&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1900&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="payload-de-salida-hacia-pos">Payload de salida (hacia POS)</h3>
+<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">response OK</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="nt">&quot;statusResponse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">&quot;messageResponse&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="language-json highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">response NOK</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="nt">&quot;statusResponse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;99&quot;</span><span class="p">,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;messageResponse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lorem ipsum&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Linea Datascan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

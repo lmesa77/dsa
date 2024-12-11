@@ -1,0 +1,104 @@
+/* COLORES PRINCIPALES
+--md-primary-fg-color: #4051b5;
+--md-primary-fg-color--light: #5d6cc0;
+--md-primary-fg-color--dark: #303fa1;
+--md-primary-bg-color: #fff;
+--md-primary-bg-color--light: #ffffffb3;
+--md-accent-fg-color: #526cfe;
+--md-accent-fg-color--transparent: #526cfe1a;
+--md-accent-bg-color: #fff;
+--md-accent-bg-color--light: #ffffffb3;
+*/
+
+:root {
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --pill-red: #e74c3c;
+    --pill-green: #27ae60;
+    --pill-yellow: #f1c40f;
+    --white: white;
+    --dark-gray: #6c6c6c;
+    --shadow-box: #ccc;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+h2 {
+    text-shadow: 2px 2px 4px var(--shadow-color);
+    border-bottom: 2px solid var(--md-primary-fg-color);
+}
+
+h3 {
+    position: relative;
+    padding-left: 20px;
+}
+
+h3::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.8em;
+    color: var(--dark-gray);
+}
+
+.md-typeset code {
+    font-family: Menlo, "Fira Code", Monaco, Consolas, "Courier New", monospace;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px var(--shadow-box);
+}
+
+.pill {
+    display: inline-block;
+    color: var(--white);
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.pill-red {
+    background-color: var(--pill-red);
+    display: inline-block;
+    color: var(--white);
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.pill-green {
+    background-color: var(--pill-green);
+    display: inline-block;
+    color: var(--white);
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.pill-yellow {
+    background-color: var(--pill-yellow);
+    display: inline-block;
+    color: var(--white);
+    border-radius: 25px;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.md-typeset [type=checkbox]:checked+.task-list-indicator:before {
+    background-color: var(--dark-gray);
+    -webkit-mask-image: var(--md-tasklist-icon--checked);
+    mask-image: var(--md-tasklist-icon--checked)
+}

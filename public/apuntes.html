@@ -1,0 +1,1189 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmesa.gitlab.io/doc-nueva-arquitectura/apuntes.html">
+      
+      
+      
+      
+      <link rel="icon" href="assets/logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Apuntes - Nueva Arquitectura</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Poppins";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#apuntes" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Nueva Arquitectura" class="md-header__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nueva Arquitectura
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Apuntes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 6v12h8V6H8m6 4h-4V8h4v2m5.4-8.4C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="black"  aria-label="Oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.4 1.6C19 1.2 18.5 1 18 1H6c-.5 0-1 .2-1.4.6C4.2 2 4 2.5 4 3v18c0 .5.2 1 .6 1.4.4.4.9.6 1.4.6h12c.5 0 1-.2 1.4-.6.4-.4.6-.9.6-1.4V3c0-.5-.2-1-.6-1.4M18 21H6V3h12v18M8 6v12h8V6H8m7 11H9V7h6v10m-5-3h4v2h-4v-2Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Nueva Arquitectura" class="md-nav__button md-logo" aria-label="Nueva Arquitectura" data-md-component="logo">
+      
+  <img src="assets/logo.svg" alt="logo">
+
+    </a>
+    Nueva Arquitectura
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contexto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Definiciones
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Definiciones
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="definiciones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de dominio basada en Microservicios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="serv-app.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servidor de Aplicaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="venta-contenido.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Venta de contenidos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="dicc-datos.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Diccionario de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="bitacora.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bitácora
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="inventario.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventarios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="poc.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pruebas de concepto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glosario.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glosario
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="links.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Links de Interés
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="backlog.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación Técnica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación Técnica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/documentacion.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura de Servicios de Dominio DSA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/mensaje.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    La Clase BaseMessage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/componentes.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/excepciones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manejo de excepciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/estructura-carpetas.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estructura de Carpetas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/trazabilidad.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trazabilidad Operativa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/arquitectura-limpia.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquitectura Limpia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="doctecnica/patron-pipeline.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Patrón Pipeline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reponsables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reponsables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apoyo-tecnico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apoyo técnico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preguntas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tareas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tareas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mis-notas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mis Notas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-relacionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes relacionados
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      RoadMap
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RoadMap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapa-preliminar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa preliminar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-de-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa de migración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etapa-posterior-a-la-migracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etapa posterior a la migración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="apuntes">Apuntes</h1>
+<h2 id="reponsables">Reponsables</h2>
+<ul>
+<li>John Fredy Marulanda Correa (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#109;&#97;&#114;&#117;&#108;&#97;&#110;&#100;&#97;&#64;&#103;&#114;&#117;&#112;&#111;&#45;&#101;&#120;&#105;&#116;&#111;&#46;&#99;&#111;&#109;">&#106;&#109;&#97;&#114;&#117;&#108;&#97;&#110;&#100;&#97;&#64;&#103;&#114;&#117;&#112;&#111;&#45;&#101;&#120;&#105;&#116;&#111;&#46;&#99;&#111;&#109;</a>)</li>
+<li>Guiovanni Gualteros (<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#103;&#103;&#117;&#97;&#108;&#116;&#101;&#114;&#111;&#115;&#64;&#103;&#114;&#117;&#112;&#111;&#45;&#101;&#120;&#105;&#116;&#111;&#46;&#99;&#111;&#109;">&#103;&#103;&#117;&#97;&#108;&#116;&#101;&#114;&#111;&#115;&#64;&#103;&#114;&#117;&#112;&#111;&#45;&#101;&#120;&#105;&#116;&#111;&#46;&#99;&#111;&#109;</a>)</li>
+</ul>
+<h2 id="apoyo-tecnico">Apoyo técnico</h2>
+<ul>
+<li>Jose Bernardo Arcos</li>
+<li>Duván Agudelo</li>
+</ul>
+<h2 id="contexto">Contexto</h2>
+<p>Ventas de Contenido es un canal por el cual se venden servicios de terceros tales como <strong><em>telefonia</em></strong>, <strong><em>streaming</em></strong> y <strong><em>membresias</em></strong> entre otras. El proceso consiste en indicarle al POS el PLU asociado al servicio (representado en tarjetas):</p>
+<figure>
+    <a class="glightbox" href="assets/notas/001.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tarjetas" src="assets/notas/001.png" /></a>
+    <figcaption>Tarjetas de Membresía</figcaption>
+</figure>
+<figure>
+    <a class="glightbox" href="assets/notas/002.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="tarjetas" src="assets/notas/002.png" /></a>
+    <figcaption>Código de barras de la tarjeta</figcaption>
+</figure>
+<p>Seguidamente se escanea el código de barras de la tarjeta (1). En la mayoria de casos, las tarjetas cuentan con un valor asignado de recarga (2) con excepcion de algunas tarjetas de telefonia que si permiten agregar un valor de recarga indefinido.</p>
+<p>El POS envia la informacion al autorizador y este puede responder:</p>
+<ol>
+<li>
+<p><strong><em>Aceptando la intención de activación</em></strong>: En caso de aceptación, el servicio no queda recargado hasta que no se confirma el pago de la tarjeta.<sup>(revisar)</sup> Este pago se puede realizar por cualquier tipo de medio dispuesto para ello.</p>
+</li>
+<li>
+<p><strong><em>Rechazando la intencion de activación</em></strong>: En caso de rechazo, el POS muestra un mensaje genérico de rechazo.<sup>(revisar)</p>
+</li>
+</ol>
+<h2 id="componentes">Componentes</h2>
+<ul>
+<li>
+<p><strong><em>Archivo JAR</em></strong>: <a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-contenido-termFw-VentaContenidos"><code>VentaContenidos.jar</code></a></p>
+</li>
+<li>
+<p><strong><em>Archivo HCH</em></strong>: <a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-ventaContenido-contPAFHCH-hchconte"><code>HCHCONTE.JAR</code></a></p>
+</li>
+<li>
+<p><strong><em>Dependencia</em></strong>: <a href="https://dev.azure.com/grupo-exito/GCIT-Agile/_git/pos-reglas-termFw-FrameworkContenidosPagos"><code>FrameworkContenidosPagos.jar</code></a></p>
+</li>
+<li>
+<p><strong><em>Archivo FW</em></strong>: <code>FWVDCONT.DAT</code></p>
+</li>
+<li>
+<p><strong><em>Archivo BAS</em></strong>: <code>uefrwmod</code>, <code>uefrwmo2</code>, <code>uefrmo3</code></p>
+</li>
+</ul>
+<h2 id="preguntas">Preguntas</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Diferencia entre FW y Dominio</em></strong></li>
+<li>Implementacion de soluciones que escalan la funcionalidad del POS</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Dominio</em></strong>: Es escalable y permite la integreacion de varias soluciones<ul>
+<li>Persistencia manejada con BBDD</li>
+<li>Comunicacion de comunicaciones propias (Servidor de Aplicaciones)</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Framework</em></strong>: Enfocada en un tipo de soluciones especificas... no permitia la escalabilidad por su complejidad.<ul>
+<li>Venta: Es la venta de un PLU. Lon ingreso proviene del ejercicio del negocio.</li>
+<li>Pago: Es el movimiento de dinero en ambas direcciones que pueden tener o no relacionados un PLU. Los ingresos se dan por el movimiento de dinero.</li>
+<li>Operación No Venta: Operaciones que no generan ingresos.</li>
+<li>Persistencia acoplado a <strong><em>TOSHIBA</em></strong> (Archivos KEYED)</li>
+<li>Comunicación mediante PAF</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Cual es la filosofia en la migración... que se pretende mejorar?</em></strong></li>
+<li>Escalabilidad</li>
+<li>Persistencia</li>
+<li>Comunicación</li>
+<li>Mantenibilidad</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Han habido intentos anteriores de migración y si ha sido asi en que han fallado?</em></strong></li>
+<li>Ya se han migrado servicios de manera completa</li>
+<li>Otras aun existen en Framework por falta de tiempo/recursos</li>
+<li><em>Tarjetas Regalo</em> y <em>Convenios</em> existen en ambas arquitecturas (hibrido)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿Hay lineamientos en la migracion actualmente?</em></strong></li>
+<li>Que tipo de producto se desea migrar (reglas de negocio)</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿Homologos de componentes entre arquitecturas (Ej HCH's)?</em></strong></p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿Hay módulo de activación? - ¿Se permite reversar la compra despues del pago?</em></strong>
+    <pendiente></p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Cuales son los servicios que se venden en los puestos de pago?</em></strong></li>
+<li>Netflix</li>
+<li>PSStore</li>
+<li>Xbox</li>
+<li>Recarga a operadores de telefonia (distintos a Movil Exito)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿Los atributos de configuracion se deben externalizar? (por fuera de la compilación)</em></strong>
+  <pendiente></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Qué componente de BASIC empuja la ejecución de ventaContenido?</em></strong></li>
+<li><code>uefrwmod</code></li>
+<li><code>uefrwmo2</code></li>
+<li><code>uefrmo3</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿Qué es Electronic Journal?</em></strong>
+  <pendiente></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿Qué es TLog?</em></strong>
+  <pendiente></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Qué es Middleware?</em></strong>
+  Es el componente que se encarga de redireccionar las peticiones hacia framework o Dominio</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿Qué es Middleware Cloud?</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Qué es Interface?</em></strong>
+  Es el encargado de interpretar el mensaje recibido via <code>Middleware</code> desde <code>BASIC</code> y enviarlo al <code>Director</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Qué es DataEntry?</em></strong>
+  Es un conjunto de subgrupos que se encargan de <em>marcar</em> un item con unas caracteristicas que desencadenan flujos especiales al momento de la venta y pago. Por ejemplo la venta de una tarjeta de Netflix.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Qué son CallJavaBasic?</em></strong>
+  Es el protocolo de comunicación usado actualmente para transferir información entre BASIC y JAVA.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>¿Qué diferencia Pago, Venta y No Venta?</em></strong>
+  <strong><em>Venta</em></strong> es la intención de compra de un item por parte de un cliente y que afecta tantos los inventarios como el flujo de dinero de ls compañia
+  <strong><em>No Venta</em></strong> es la operación que no afecta los inventarios de la compañia y presta el servicio de un tercero como son las recargas, lo giros, las apuestas, etc.
+  <strong><em>Pago</em></strong> es el último paso que cierra la transacción y asienta la venta de un item.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>¿La comunicacion va a ser ISO o HTTP?</em></strong>
+  <pendiente></li>
+</ul>
+<h2 id="tareas">Tareas</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> revisar la arquitectura actual (framework)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Entender el flujo del proceso y la relación de componentes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> revisar la arquitectura a implementar (dominio)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> consultar migraciones previas</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Solicitar ambiente</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Si es relevante, conocer los PLU de los servicios ofrecidos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Revisar componentes de producción</li>
+</ul>
+<h2 id="mis-notas">Mis Notas</h2>
+<ul>
+<li>ISOService: componente del lado del Dominio para manejar las tramas ISO8583</li>
+<li>JSON con capa de seguridad</li>
+<li>Operaciones</li>
+<li>Pagos</li>
+<li>Ventas</li>
+<li>Intercambio de medio de pago</li>
+<li>Eventos</li>
+<li>Objeto POSTransaction: Estandar de todos los productos del negocio. Es decir, que atributos hacen parte de cada transaccion dependiendo el producto.</li>
+<li>Orden jeraquico:</li>
+<li><code>VentaContenidos.jar</code> (bp)</li>
+<li><code>FrameworkContenidosPagos.jar</code> (platform)</li>
+<li><code>Reportes.jar</code>, <code>Persist.jar</code> o <code>Presentacion.jar</code> (libs)</li>
+<li>Arquitectura</li>
+<li>
+<p>Framework</p>
+<ul>
+<li><figure markdown="span">
+    <a class="glightbox" href="assets/notas/ModelodeFramework.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ark" src="assets/notas/ModelodeFramework.png" /></a>
+    <figcaption>Arquitectura Framework</figcaption>
+  </figure></li>
+</ul>
+</li>
+<li>
+<p>Dominio</p>
+<ul>
+<li><figure markdown="span">
+    <a class="glightbox" href="assets/notas/ModelodeDominio1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ark" src="assets/notas/ModelodeDominio1.png" /></a>
+    <figcaption>Arquitectura Dominio</figcaption>
+  </figure></li>
+</ul>
+</li>
+<li>
+<p>Modelo de Dominio</p>
+</li>
+<li>immergeTransportObject</li>
+<li>emmergeTransportObject</li>
+<li>transaccion positiva: Se ingresa al modelo de dominio</li>
+<li>transaccion negativa: Se retira al modelo de dominio</li>
+<li>bifrost: afectación de la base de datos</li>
+<li>prevalidaciones</li>
+<li>posvalidaciones</li>
+<li>Dia de Duvan y Bernie</li>
+<li>Tener un Diseño con base a recomendaciones</li>
+<li><strong><em>Continuidad</em></strong>: Autorizador falla no se bloquee el POS (Resiliencia)</li>
+<li><strong><em>Trazabilidad</em></strong>: Logs a escribir</li>
+</ul>
+<h2 id="componentes-relacionados">Componentes relacionados</h2>
+<ul>
+<li><code>fwvdc.dat</code>: Productos para la venta</li>
+<li><code>fwvdcont.dat</code>: Configuraciones del Product Bussiness</li>
+</ul>
+<h2 id="roadmap">RoadMap</h2>
+<h3 id="etapa-preliminar">Etapa preliminar</h3>
+<p><strong><sub>E: Estado actual - A: Acciones a seguir</sub></strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Evaluar el estado actual del software y sus dependencias:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Analizar el código fuente del software existente. (¿hay repos y estan actualizados?)<ul>
+<li>E: Hasta el momento no se encuentra discrepancia entre lo revisado y lo que está funcionando en producción</li>
+<li>A: Seguir atento</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Revisar la documentación y comprender las dependencias del sistema.<ul>
+<li>E: La documentación da una vision general de las arquitecturas pero no está actualizada con los cambios posteriores.</li>
+<li>A: Revisar los flujos</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Identificar posibles problemas o limitaciones del SW que no permitan la migración.<ul>
+<li>E: No se evidencian acoplamientos que dificulten la migración en este PB.</li>
+<li>A: Revisar flujos</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Analizar los riesgos y beneficios de la migración:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Identificar los posibles riesgos asociados con la migración.<ul>
+<li>Dependencias ocultas o Casos de Uso que no esten identificados en la primera inspección y dificulten la integracion en el DOM</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Evaluar los beneficios esperados al llevar a cabo la migración.<ul>
+<li>Escalabilidad</li>
+<li>Mantenibilidad</li>
+<li>Mejoras en Persistencia</li>
+<li>Mejoras en Comunicación</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Definir el alcance de la migración:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Identificar los componentes específicos del sistema que se migrarán.<ul>
+<li>Se migrará la funcionalidad de <strong>Ventas Contenido</strong> sin ninguna caracteristica nueva</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Establecer los criterios tecnicos para determinar qué aspectos del sistema se mantendrán sin cambios. (MUY IMPORTANTE)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Considerar aspectos tecnicos que impacten el rendimiento y la escalabilidad.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Establecer plazos de tiempo</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <strong><em>Realizar un inventario de componentes</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Evaluar tecnologías a implementar:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Detectar ventajas y desventajas de cada tecnología para tomar decisiones informadas. (MUY IMPORTANTE)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Entender la arquitectura del DOM:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Diseñar diagramas que representen la estructura y la interacción de los nuevos componentes del sistema. (RAYAR)<ul>
+<li><a class="glightbox" href="assets/notas/prop-arq.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="arq" src="assets/notas/prop-arq.png" /></a></li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Definir patrones de migración:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identificar los patrones de diseño adecuados para cada componente.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Determinar si se requiere refactorización, reingeniería u otros enfoques para migrar cada componente.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Definir protocolos de comunicación a otra capas. (Pesistencia - Middleware Cloud)</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Preparar el entorno de desarrollo y pruebas:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Configurar un entorno de desarrollo.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Establecer infraestructuras de prueba en entorno controlado. (MUY IMPORTANTE)</li>
+</ul>
+<h3 id="etapa-de-migracion">Etapa de migración</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Ejecutar la migración del servicio:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Realizar las acciones necesarias para migrar cada componente. (Creación de nuevos componentes del lado del controlador)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Transferir configuraciones y datos relevantes al nuevo entorno.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Implementación de estrategia de registros (LOGS)</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Realizar pruebas unitarias (integración - aceptación):</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Desarrollar casos de prueba para verificar el funcionamiento correcto de cada componente migrado. (QA)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ejecutar pruebas unitarias para identificar y corregir posibles problemas. (IDEAL)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Validación de la integridad de los datos migrados/generados:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Verificar que los datos migrados sean consistentes y precisos.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Realizar pruebas integración. (QA)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Observar el rendimiento:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Monitorear el rendimiento del servicio en términos de eficiencia y resiliensia.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ajustes (Refactory).</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Observar la escalabilidad:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Enfoque a principio Open-Close.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Realizar pruebas de carga y estrés para medir la capacidad de escalabilidad del sistema. (IDEAL)</li>
+</ul>
+<h3 id="etapa-posterior-a-la-migracion">Etapa posterior a la migración</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Documentación:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Registrar todos los cambios realizados durante el proceso de migración ademas de actualizaciones de código, configuraciones y otros cambios relevantes.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Realizar pruebas finales (Aseg. Calidad) y monitorear el funcionamiento del sistema (Piloto) (QA)</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Evaluar el éxito de la migración en relación con los objetivos definidos</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <strong><em>Ajustes y refactorización:</em></strong></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Realizar ajustes adicionales o refactorización del sistema migrado en base a la retroalimentación y los resultados obtenidos.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Corregir posibles errores o deficiencias identificadas durante la etapa de pruebas.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 Linea Datascan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top"], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
